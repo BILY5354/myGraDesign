@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/blog-frontend-master/blog-frontend-master.iml" filepath="$PROJECT_DIR$/blog-frontend-master/blog-frontend-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cloud/cloud.iml" filepath="$PROJECT_DIR$/cloud/cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/article-service/article-service.iml" filepath="$PROJECT_DIR$/article-service/article-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myGraDesign.iml" filepath="$PROJECT_DIR$/myGraDesign.iml" />
     </modules>
   </component>
 </project>
