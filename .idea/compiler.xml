@@ -6,19 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="article-service" />
         <module name="myGraDesign" />
+        <module name="article-service" />
+        <module name="category-service" />
+        <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="article-service" target="1.8" />
+      <module name="category-service" target="1.8" />
       <module name="myGraDesign" target="1.8" />
+      <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="article-service" options="-parameters" />
+      <module name="category-service" options="-parameters" />
       <module name="myGraDesign" options="-parameters" />
+      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>
