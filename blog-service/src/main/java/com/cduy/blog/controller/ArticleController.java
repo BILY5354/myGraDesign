@@ -1,11 +1,14 @@
 package com.cduy.blog.controller;
 
-import com.cduy.blog.controller.utils.R;
+import com.cduy.blog.vo.Result;
+import com.cduy.blog.domain.Article;
 import com.cduy.blog.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author CDUY
@@ -18,8 +21,12 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
+    /**
+     * 查看所有的博客
+     */
     @GetMapping
-    public R getAll() {
-        return new R(true,articleService.list());
+    public Result<List<Article>> getAll() {
+        System.out.println("get all article");
+        return Result.ok(articleService.list());
     }
 }

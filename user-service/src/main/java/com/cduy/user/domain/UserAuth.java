@@ -1,4 +1,4 @@
-package com.cduy.blog.domain;
+package com.cduy.user.domain;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 /**
- * 文章
  * @author CDUY
  * @version 1.0
  */
@@ -17,7 +16,8 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Article {
+@TableName("tb_user_auth")
+public class UserAuth {
 
     /**
      * id
@@ -26,54 +26,34 @@ public class Article {
     private Integer id;
 
     /**
-     * 作者
+     * 用户信息id
      */
-    private Integer userId;
+    private Integer userInfoId;
 
     /**
-     * 文章分类
+     * 用户名
      */
-    private Integer categoryId;
+    private String username;
 
     /**
-     * 文章缩略图
+     * 密码
      */
-    private String articleCover;
+    private String password;
 
     /**
-     * 标题
+     * 登录类型
      */
-    private String articleTitle;
+    private Integer loginType;
 
     /**
-     * 内容
+     * 用户登录ip
      */
-    private String articleContent;
+    private String ipAddress;
 
     /**
-     * 文章类型
+     * ip来源
      */
-    private Integer type;
-
-    /**
-     * 原文链接
-     */
-    private String originalUrl;
-
-    /**
-     * 是否置顶
-     */
-    private Integer isTop;
-
-    /**
-     * 是否删除
-     */
-    private Integer isDelete;
-
-    /**
-     * 文章状态 1.公开 2.私密 3.评论可见
-     */
-    private Integer status;
+    private String ipSource;
 
     /**
      * 创建时间
@@ -87,4 +67,10 @@ public class Article {
     @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
 
+    /**
+     * 最近登录时间
+     */
+    private LocalDateTime lastLoginTime;
+
 }
+
