@@ -51,21 +51,23 @@ Vue.filter("num", function (value) {
     return value;
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) = > {
     NProgress.start();
-    if (to.meta.title) {
-        document.title = to.meta.title;
-    }
-    next();
-});
+if (to.meta.title) {
+    document.title = to.meta.title;
+}
+next();
+})
+;
 
-router.afterEach(() => {
+router.afterEach(() = > {
     window.scrollTo({
         top: 0,
         behavior: "instant"
     });
-    NProgress.done();
-});
+NProgress.done();
+})
+;
 
 axios.interceptors.response.use(
     function (response) {
@@ -84,5 +86,6 @@ new Vue({
     router,
     store,
     vuetify,
-    render: h => h(App)
-}).$mount("#app");
+    render: h = > h(App)
+}).
+$mount("#app");

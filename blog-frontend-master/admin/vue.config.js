@@ -12,10 +12,11 @@ module.exports = {
         },
         disableHostCheck: true
     },
-    chainWebpack: config => {
-        config.resolve.alias.set("@", resolve("src"));
-    }
-};
+    chainWebpack: config = > {
+    config.resolve.alias.set("@", resolve("src"));
+}
+}
+;
 
 const path = require("path");
 

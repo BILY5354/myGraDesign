@@ -8,15 +8,17 @@ const routes = [
         path: "/login",
         name: "登录",
         hidden: true,
-        component: () => import("../views/login/Login.vue")
-    }
-];
+        component: () = > import("../views/login/Login.vue")
+}
+]
+;
 
-const createRouter = () =>
-    new VueRouter({
-        mode: "history",
-        routes: routes
-    });
+const createRouter = () =
+>
+new VueRouter({
+    mode: "history",
+    routes: routes
+});
 
 const router = createRouter();
 

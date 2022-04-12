@@ -51,20 +51,22 @@ NProgress.configure({
     minimum: 0.3 // 初始化时的最小百分比
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) = > {
     NProgress.start();
-    if (to.path == "/login") {
-        next();
-    } else if (!store.state.userId) {
-        next({path: "/login"});
-    } else {
-        next();
-    }
-});
+if (to.path == "/login") {
+    next();
+} else if (!store.state.userId) {
+    next({path: "/login"});
+} else {
+    next();
+}
+})
+;
 
-router.afterEach(() => {
+router.afterEach(() = > {
     NProgress.done();
-});
+})
+;
 
 // 响应拦截器
 axios.interceptors.response.use(
@@ -94,5 +96,6 @@ axios.interceptors.response.use(
 new Vue({
     router,
     store,
-    render: h => h(App)
-}).$mount("#app");
+    render: h = > h(App)
+}).
+$mount("#app");
