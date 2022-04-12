@@ -1,13 +1,13 @@
-package com.example;
+package com.cduy.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ArticleServiceApplication {
+public class BlogServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ArticleServiceApplication.class, args);
+        SpringApplication.run(BlogServiceApplication.class, args);
     }
 
 }

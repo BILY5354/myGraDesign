@@ -1,10 +1,10 @@
-package com.cduy;
+package com.cduy.blog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CategoryServiceApplicationTests {
+class BlogServiceApplicationTests {
 
     @Test
     void contextLoads() {

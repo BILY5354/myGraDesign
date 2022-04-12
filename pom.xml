@@ -17,9 +17,8 @@
 
     <!--有新的微服务模块这里添加-->
     <modules>
-        <module>article-service</module>
+        <module>blog-service</module>
         <module>user-service</module>
-        <module>category-service</module>
     </modules>
 
     <properties>
