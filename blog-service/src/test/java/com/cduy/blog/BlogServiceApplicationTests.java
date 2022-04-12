@@ -1,4 +1,4 @@
-package com.cduy.user.blog;
+package com.cduy.blog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,5 @@
-package com.itheima.controller.utils;
+package com.cduy.blog.controller.utils;
 
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

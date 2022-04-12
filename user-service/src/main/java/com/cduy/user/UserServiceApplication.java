@@ -1,4 +1,4 @@
-package com.cduy;
+package com.cduy.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
