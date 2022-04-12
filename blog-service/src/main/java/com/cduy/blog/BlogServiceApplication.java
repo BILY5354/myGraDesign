@@ -1,4 +1,4 @@
-package com.cduy.blog;
+package com.cduy.user.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
