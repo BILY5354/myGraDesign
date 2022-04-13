@@ -7,6 +7,11 @@ spring:
     url: jdbc:mysql://localhost:3306/blog_service?serverTimezone=UTC
     username: root
     password: 123456
+  #application:
+  #  name: blogservice
+  #cloud:
+  #  nacos:
+  #   server-addr: 8848 #naccs服务端口
 
 mybatis-plus:
   global-config:
