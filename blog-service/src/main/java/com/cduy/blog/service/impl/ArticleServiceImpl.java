@@ -30,7 +30,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
         Article article = articleService.getById(articleId);
         //2.远程查询user
         //2.1url地址
-        String url = "http://localhost:81/users/" + article.getUserId();
+        //String url = "http://localhost:81/users/" + article.getUserId();
+        String url = "http://userservice/users/" + article.getUserId();
         //2.2发起调用 因为返回结果被封装成了 Result
         Result<UserAuth> result = restTemplate.getForObject(url, Result.class);
         // 因为返回的数据是 Result 需要处理数据
