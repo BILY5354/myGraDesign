@@ -87,4 +87,10 @@ public class Article {
     @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
 
+    /**
+     * 该字段在 article 表中没有 用于根据userid查询 用户信息
+     */
+    @TableField(exist = false)
+    private UserAuth userAuth;
+
 }
