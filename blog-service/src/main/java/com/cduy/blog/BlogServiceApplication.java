@@ -14,7 +14,7 @@ public class BlogServiceApplication {
     }
 
     @Bean
-    @LoadBalanced
+    @LoadBalanced//用于实现负载均衡
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

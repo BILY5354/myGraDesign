@@ -30,12 +30,11 @@ public class UserAuthController {
     private UserAuthService userAuthService;
 
     /*******START 配置热更新*******/
-
     //第一种 获取配置管理的配置 在nacos上的
     /*@Value("${pattern.dateformat}")
     private String dateformat;*/
 
-    //第二种
+    //第二种 使用配置类 config.PatternProperties
     @Autowired
     private PatternProperties properties;
 
@@ -43,9 +42,15 @@ public class UserAuthController {
     public String now() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern(properties.getDateformat()));
     }
-
     /*******END 配置热更新*******/
 
+
+    /*******START 多环境配置共享*******/
+    @GetMapping("prop")
+    public PatternProperties properties() {
+        return properties;
+    }
+    /*******END 多环境配置共享*******/
 
     /**
      * 查看所有用户
