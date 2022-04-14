@@ -25,4 +25,4 @@ mybatis-plus:
 ribbon:
   eager-load:
     enabled: true
-    clients: userservice
+    clients: userservice # 饥饿加载
