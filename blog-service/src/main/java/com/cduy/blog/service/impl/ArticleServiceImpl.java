@@ -3,6 +3,7 @@ package com.cduy.blog.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.cduy.blog.clients.UserAuthClient;
 import com.cduy.blog.dao.ArticleDao;
 import com.cduy.blog.domain.Article;
 import com.cduy.blog.domain.UserAuth;
@@ -22,7 +23,27 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
     @Autowired
     private ArticleService articleService;
 
+    /**START 使用Feign远程调用*/
     @Autowired
+    private UserAuthClient userAuthClient;
+
+    @Override
+    public Article queryArticleById(Integer articleId) {
+        //1.查询文章
+        Article article = articleService.getById(articleId);
+        //2.用Feign远程调用
+        Result<UserAuth> result = userAuthClient.findById(article.getUserId());
+        // 因为返回的数据是 Result 需要处理数据
+        String jsonObject = JSON.toJSONString(result.getData());
+        UserAuth userAuth = JSON.parseObject(jsonObject, UserAuth.class);
+        //3.存入article
+        article.setUserAuth(userAuth);
+        return article;
+    }
+    /**END 使用Feign远程调用*/
+
+    /**START 使用RestTemplate远程调用 该方法可读性不高 该用Feign*/
+    /*@Autowired
     private RestTemplate restTemplate;
 
     public Article queryArticleById(Integer articleId) {
@@ -32,6 +53,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
         //2.1url地址
         //String url = "http://localhost:81/users/" + article.getUserId();
         String url = "http://userservice/users/" + article.getUserId();
+        System.out.println(url);
         //2.2发起调用 因为返回结果被封装成了 Result
         Result<UserAuth> result = restTemplate.getForObject(url, Result.class);
         // 因为返回的数据是 Result 需要处理数据
@@ -41,5 +63,6 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
         article.setUserAuth(userAuth);
         //4.返回
         return article;
-    }
+    }*/
+    /**END 使用RestTemplate远程调用 该方法可读性不高 该用Feign*/
 }
