@@ -1,8 +1,9 @@
 package com.cduy.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.cduy.blog.domain.Article;
-import com.cduy.blog.dto.ArchiveDTO;
+import com.cduy.blog.dto.*;
+import com.cduy.blog.entity.Article;
+import com.cduy.blog.vo.*;
 
 import java.util.List;
 

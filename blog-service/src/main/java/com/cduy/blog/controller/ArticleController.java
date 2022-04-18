@@ -1,7 +1,7 @@
 package com.cduy.blog.controller;
 
 import com.cduy.blog.vo.Result;
-import com.cduy.blog.domain.Article;
+import com.cduy.blog.entity.Article;
 import com.cduy.blog.service.ArticleService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;

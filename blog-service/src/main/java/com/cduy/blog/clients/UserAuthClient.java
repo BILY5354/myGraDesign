@@ -1,6 +1,6 @@
 package com.cduy.blog.clients;
 
-import com.cduy.blog.domain.UserAuth;
+import com.cduy.blog.entity.UserAuth;
 import com.cduy.blog.vo.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

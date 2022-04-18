@@ -1,4 +1,4 @@
-package com.cduy.blog.domain;
+package com.cduy.blog.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
