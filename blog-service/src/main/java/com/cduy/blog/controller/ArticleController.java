@@ -3,6 +3,7 @@ package com.cduy.blog.controller;
 import com.cduy.blog.vo.Result;
 import com.cduy.blog.domain.Article;
 import com.cduy.blog.service.ArticleService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import java.util.List;
  * @author CDUY
  * @version 1.0
  */
+@Api(tags = "文章模块")
 @RestController
 @RequestMapping("/articles")
 public class ArticleController {

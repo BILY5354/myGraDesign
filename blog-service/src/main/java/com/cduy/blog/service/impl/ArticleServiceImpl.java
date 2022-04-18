@@ -20,6 +20,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> implements ArticleService {
 
+    /**START MICRO_SERVICE*/
     @Autowired
     private ArticleService articleService;
 
@@ -65,4 +66,5 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
         return article;
     }*/
     /**END 使用RestTemplate远程调用 该方法可读性不高 该用Feign*/
+    /**END MICRO_SERVICE*/
 }
