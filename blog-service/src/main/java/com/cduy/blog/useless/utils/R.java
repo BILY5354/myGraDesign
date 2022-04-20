@@ -1,4 +1,4 @@
-package com.cduy.blog.controller.utils;
+package com.cduy.blog.useless.utils;
 
 import lombok.Data;
 

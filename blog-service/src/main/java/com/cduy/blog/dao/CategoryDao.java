@@ -5,6 +5,7 @@ import com.cduy.blog.dto.CategoryBackDTO;
 import com.cduy.blog.dto.CategoryDTO;
 import com.cduy.blog.entity.Category;
 import com.cduy.blog.vo.ConditionVO;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cduy.blog.dto.TagBackDTO;
 import com.cduy.blog.entity.Tag;
 import com.cduy.blog.vo.ConditionVO;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
