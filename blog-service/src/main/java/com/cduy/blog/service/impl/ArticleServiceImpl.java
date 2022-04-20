@@ -1,17 +1,15 @@
 package com.cduy.blog.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cduy.blog.clients.UserAuthClient;
 import com.cduy.blog.dao.ArticleDao;
 import com.cduy.blog.domain.Article;
-import com.cduy.blog.domain.UserAuth;
 import com.cduy.blog.service.ArticleService;
-import com.cduy.blog.vo.Result;
+import com.cduy.feign.clients.UserAuthClient;
+import com.cduy.feign.domain.UserAuth;
+import com.cduy.feign.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * @author CDUY
