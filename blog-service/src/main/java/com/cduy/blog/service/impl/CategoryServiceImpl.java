@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
@@ -92,7 +93,9 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, Category> impl
         Category category = Category.builder()
                 .id(categoryVO.getId())
                 .categoryName(categoryVO.getCategoryName())
+                .createTime(LocalDateTime.now())
                 .build();
+        /*System.out.println(category);*/
         this.saveOrUpdate(category);
     }
 }

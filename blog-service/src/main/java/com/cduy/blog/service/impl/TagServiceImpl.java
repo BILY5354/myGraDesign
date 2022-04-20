@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
@@ -92,6 +93,7 @@ public class TagServiceImpl  extends ServiceImpl<TagDao, Tag> implements TagServ
             throw new BizException("标签名已存在");
         }
         Tag tag = BeanCopyUtils.copyObject(tagVO, Tag.class);
+        tag.setCreateTime(LocalDateTime.now());
         this.saveOrUpdate(tag);
     }
 }
