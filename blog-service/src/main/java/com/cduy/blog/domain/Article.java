@@ -1,6 +1,7 @@
 package com.cduy.blog.domain;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.cduy.feign.domain.UserAuth;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
