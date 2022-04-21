@@ -1,6 +1,5 @@
 package com.cduy.feign.clients;
 
-
 import com.cduy.feign.domain.UserAuth;
 import com.cduy.feign.vo.Result;
 import org.springframework.cloud.openfeign.FeignClient;

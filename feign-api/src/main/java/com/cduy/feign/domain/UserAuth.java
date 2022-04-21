@@ -1,5 +1,6 @@
 package com.cduy.feign.domain;
 
+
 import lombok.Data;
 
 import java.time.LocalDateTime;

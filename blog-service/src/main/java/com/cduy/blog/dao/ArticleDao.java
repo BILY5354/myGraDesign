@@ -1,7 +1,7 @@
 package com.cduy.blog.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.cduy.blog.domain.Article;
+import com.cduy.blog.entity.Article;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -12,4 +12,5 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface ArticleDao extends BaseMapper<Article> {
+
 }

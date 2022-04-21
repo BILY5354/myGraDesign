@@ -1,9 +1,10 @@
 package com.cduy.blog.service.impl;
 
+
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cduy.blog.dao.ArticleDao;
-import com.cduy.blog.domain.Article;
+import com.cduy.blog.entity.Article;
 import com.cduy.blog.service.ArticleService;
 import com.cduy.feign.clients.UserAuthClient;
 import com.cduy.feign.domain.UserAuth;
@@ -18,13 +19,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> implements ArticleService {
 
-    @Autowired
-    private ArticleService articleService;
-
+    /**START MICRO_SERVICE*/
     /**START 使用Feign远程调用*/
     @Autowired
     private UserAuthClient userAuthClient;
+    @Autowired
+    private ArticleService articleService;
+    /**END 使用Feign远程调用*/
+    /**END MICRO_SERVICE*/
 
+
+
+    /**START MICRO_SERVICE*/
+    /**START 使用Feign远程调用*/
     @Override
     public Article queryArticleById(Integer articleId) {
         //1.查询文章
@@ -63,4 +70,5 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
         return article;
     }*/
     /**END 使用RestTemplate远程调用 该方法可读性不高 该用Feign*/
+    /**END MICRO_SERVICE*/
 }
