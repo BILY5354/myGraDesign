@@ -9,12 +9,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="blog-service" />
         <module name="user-service" />
+        <module name="gateway" />
+        <module name="feignapi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="article-service" target="1.8" />
       <module name="blog-service" target="1.8" />
       <module name="category-service" target="1.8" />
+      <module name="feignapi" target="1.8" />
+      <module name="gateway" target="1.8" />
       <module name="myGraDesign" target="1.8" />
       <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>
@@ -24,6 +28,8 @@
       <module name="article-service" options="-parameters" />
       <module name="blog-service" options="-parameters" />
       <module name="category-service" options="-parameters" />
+      <module name="feignapi" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="myGraDesign" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>

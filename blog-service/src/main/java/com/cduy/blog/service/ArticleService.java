@@ -1,11 +1,13 @@
 package com.cduy.blog.service;
 
+
+
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.cduy.blog.dto.*;
 import com.cduy.blog.entity.Article;
 import com.cduy.blog.vo.*;
-
 import java.util.List;
+
 
 /**
  * 文章服务
@@ -14,6 +16,9 @@ import java.util.List;
  */
 public interface ArticleService extends IService<Article> {
 
+
+
+    /**START MICRO_SERVICE*/
     /**
      * 查询文章归档
      *

@@ -2,13 +2,11 @@ package com.cduy.blog.service.impl;
 
 import static com.cduy.blog.enums.ArticleStatusEnum.DRAFT;
 import static com.cduy.blog.enums.ArticleStatusEnum.PUBLIC;
-
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cduy.blog.clients.UserAuthClient;
 import com.cduy.blog.constant.CommonConst;
 import com.cduy.blog.constant.RedisPrefixConst;
 import com.cduy.blog.dao.ArticleDao;
@@ -25,16 +23,20 @@ import com.cduy.blog.service.TagService;
 import com.cduy.blog.util.BeanCopyUtils;
 import com.cduy.blog.util.PageUtils;
 import com.cduy.blog.vo.*;
+import com.cduy.blog.entity.Article;
+import com.cduy.feign.clients.UserAuthClient;
+import com.cduy.feign.entity.UserAuth;
+import com.cduy.feign.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.servlet.http.HttpSession;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
+
 
 /**
  * @author CDUY
@@ -84,6 +86,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
         List<ArchiveDTO> archiveDTOList = BeanCopyUtils.copyList(articlePage.getRecords(), ArchiveDTO.class);
         return new PageResult<>(archiveDTOList, (int) articlePage.getTotal());
     }
+
 
     @Override
     public PageResult<ArticleBackDTO> listArticleBacks(ConditionVO condition) {

@@ -1,4 +1,4 @@
-package com.cduy.blog.config;
+package com.cduy.feign.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;

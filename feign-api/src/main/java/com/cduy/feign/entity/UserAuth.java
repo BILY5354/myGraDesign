@@ -1,4 +1,6 @@
-package com.cduy.blog.entity;
+package com.cduy.feign.entity;
+
+
 
 import lombok.Data;
 

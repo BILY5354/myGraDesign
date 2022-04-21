@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cduy.blog.dto.*;
 import com.cduy.blog.entity.Article;
 import com.cduy.blog.vo.ConditionVO;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -17,6 +16,7 @@ import java.util.List;
 /*@Mapper*/
 @Repository
 public interface ArticleDao extends BaseMapper<Article> {
+
     /**
      * 查询首页文章
      *
@@ -78,4 +78,5 @@ public interface ArticleDao extends BaseMapper<Article> {
      * @return {@link List< ArticleStatisticsDTO >} 文章统计结果
      */
     List<ArticleStatisticsDTO> listArticleStatistics();
+
 }

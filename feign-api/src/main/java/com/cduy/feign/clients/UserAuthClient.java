@@ -1,11 +1,10 @@
-package com.cduy.blog.clients;
+package com.cduy.feign.clients;
 
-import com.cduy.blog.entity.UserAuth;
-import com.cduy.blog.vo.Result;
+import com.cduy.feign.entity.UserAuth;
+import com.cduy.feign.vo.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
 
 /**
  * @author CDUY
@@ -16,6 +15,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface UserAuthClient {
 
     @GetMapping("/users/{id}")
-    Result<UserAuth> findById(@PathVariable("id")Integer id);
+    Result<UserAuth> findById(@PathVariable("id") Integer id);
 }
 

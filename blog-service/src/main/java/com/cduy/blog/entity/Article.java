@@ -1,6 +1,7 @@
 package com.cduy.blog.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.cduy.feign.entity.UserAuth;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
