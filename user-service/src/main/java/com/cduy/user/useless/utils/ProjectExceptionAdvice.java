@@ -1,4 +1,4 @@
-package com.cduy.user.controller.utils;
+package com.cduy.user.useless.utils;
 
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

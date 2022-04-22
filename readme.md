@@ -11,3 +11,7 @@ startup.cmd -m standalone
 String jsonObject = JSON.toJSONString(result.getData());
         UserAuth userAuth = JSON.parseObject(jsonObject, UserAuth.class);
 ```
+
+## 需要完成的接口
+ArticleServiceImpl中的saveArticleLike saveOrUpdateArticle
+这两个接口需要用户登录
